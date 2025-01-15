@@ -1,0 +1,138 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Me - Nadia Drenska</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Nadia Drenska</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="cv.pdf" onclick="confirmCV(); return false;">CV</a></li>
+                <li class="active"><a href="about.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CV Ask -->
+    <script>
+        function confirmCV() {
+            if (confirm("Leave Page to View CV?")) {
+                window.open('cv.pdf', '_blank');
+            }
+        }
+    </script>
+
+    <!-- Boat Banner Section -->
+    <div class="boat-banner" style="background-image: url('./pictures/boatriver.JPG');">
+        <div class="boat-banner-content">
+            <h1>About me!</h1>
+            <div class="about-hero-content">
+                <p>Welcome to my about page. Learn more about my background, interests, and accomplishments.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accomplishments Section -->
+    <div class="features-section">
+        <div class="container">
+            <h2>Accomplishments</h2>
+            <div class="row">
+                <div class="col-md-4 feature">
+                    <div class="feature-icon">
+                        <span class="glyphicon glyphicon-education"></span>
+                    </div>
+                    <h3>Education</h3>
+                    <p>PhD in Mathematics from Courant Institute of Mathematical Sciences, NYU.</p>
+                    <p>Dual Bachelor of Science in Mathematics and Applied Mathematics from Brown University.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <div class="feature-icon">
+                        <span class="glyphicon glyphicon-briefcase"></span>
+                    </div>
+                    <h3>Experience</h3>
+                    <p>Assistant Professor at Louisiana State University.</p>
+                    <p>MCFAM Postdoctoral Fellow at the University of Minnesota.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <div class="feature-icon">
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <h3>Awards</h3>
+                    <p>Rufus Isaacs Postdoctoral Fellow at Johns Hopkins University.</p>
+                    <p>Recipient of multiple research grants and awards.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="about-background-section" style="background-image: url('./pictures/bf.jpg');">
+        <div class="about-background-section-content">
+            <img src="./pictures/Drenska, Nadejda 1.JPG" alt="Nadia Drenska" class="about-img img-responsive img-rounded">
+            <p class="about-text">
+                Besides math, I enjoy playing bridge, especially at regional and national venues. Another of my hobbies is watching baseball, especially my favorite Red Sox!
+            </p>
+        </div>
+    </div>
+    <!--<div class="about-background-section" style="background-image: url('./pictures/bf.jpg');">-->
+    <!--<div class="about-background-section-content">
+        <img src="./pictures/water.JPG" alt="Water" class="about-img img-responsive img-rounded">
+        <p class="about-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>-->
+    <!--</div>-->
+    <!-- Counter Section within Background Section -->
+    <div class="about-background-section" style="background-image: url('./pictures/bf.jpg');">
+        <div class="about-background-section-content">
+            <div class="counter">
+                <h3>Number of Visits</h3>
+                <p id="visit-counter">This page has been visited <span id="visit-count">0</span> times.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar / Footer -->
+    <footer class="navbar navbar-default">
+        <div class="container-fluid text-center">
+            <p>&copy; 2024 Nadia Drenska | <a href="mailto:ndrenska@lsu.edu">ndrenska@lsu.edu</a> | <a href="https://www.math.lsu.edu/chair-welcome">LSU Math</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple counter
+        if (localStorage.getItem('visitCount')) {
+            localStorage.setItem('visitCount', Number(localStorage.getItem('visitCount')) + 1);
+        } else {
+            localStorage.setItem('visitCount', 1);
+        }
+        document.getElementById('visit-count').innerText = localStorage.getItem('visitCount');
+
+        // Scroll disappear feature
+        var lastScrollTop = 0;
+        $(window).scroll(function (event) {
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop) {
+                $('.navbar-fixed-top').fadeOut();
+            } else {
+                $('.navbar-fixed-top').fadeIn();
+            }
+            lastScrollTop = st;
+        });
+    </script>
+
+</body>
+</html>

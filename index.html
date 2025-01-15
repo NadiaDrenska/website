@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nadia Drenska</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+
+        /*CSS for scrollable view*/
+        .background-section {
+            background-image: url('./pictures/bulgaria.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .background-section-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-height: 80vh;
+            overflow-y: auto;
+            margin-inline: auto;
+            width: 80%;
+            font-size: 1.2em; 
+        }
+
+        .features-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+            .features-section h2 {
+                margin-bottom: 30px;
+            }
+
+        .feature {
+            margin-bottom: 30px;
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .feature a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 1.2em; 
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+ 
+            .feature a:hover {
+                color: #ffcc00; 
+                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Nadia Drenska</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="cv.pdf" onclick="confirmCV(); return false;">CV</a></li>
+                <li><a href="About.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CV Ask -->
+    <script>
+        function confirmCV() {
+            if (confirm("Leave Page to View CV?")) {
+                window.open('cv.pdf', '_blank');
+            }
+        }
+    </script>
+
+    <!-- Hero Section -->
+    <div class="index-hero" style="background-image: url('./pictures/test.jpeg'); background-size: cover; background-position: center; height: 106vh;">
+        <div class="hero-content">
+            <img src="./pictures/nadia.jpg" alt="Profile picture of Nadia Drenska" class="hero-img">
+            <div class="hero-text">
+                <h1>Welcome to Nadia Drenska's Website</h1>
+                <p>Explore my research, publications, and more!</p>
+                <a href="#background-section" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="row">
+                <div class="col-md-4 feature">
+                    <div class="feature-icon">
+                        <span class="glyphicon glyphicon-education"></span>
+                    </div>
+                    <h3><a href="research.html">Research</a></h3>
+                    <p>Discover my latest research projects and publications.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <div class="feature-icon">
+                        <span class="glyphicon glyphicon-briefcase"></span>
+                    </div>
+                    <h3><a href="cv.pdf">Experience</a></h3>
+                    <p>Learn about my professional journey and academic background.</p>
+                </div>
+                <div class="col-md-4 feature">
+                    <div class="feature-icon">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    </div>
+                    <h3><a href="mailto:ndrenska@lsu.edu">Contact</a></h3>
+                    <p>Get in touch with me for collaborations and inquiries.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Section -->
+    <div class="background-section" id="background-section">
+        <div class="background-section-content">
+            <h3>Hello!</h3>
+            <p>
+                I am from Bulgaria, where I graduated from the Sofia High School of Mathematics.
+                I then moved to the United States to attend Brown University, where I earned a dual Bachelor of Science in Mathematics (Honors) and Applied Mathematics (Honors).
+                I completed my PhD at the Courant Institute of Mathematical Sciences, New York University, under the supervision of Dr. Robert V. Kohn. Following this, I served as a MCFAM Postdoctoral Fellow at the University of Minnesota and as a Rufus Isaacs Postdoctoral Fellow in the Department of Applied Mathematics and Statistics at Johns Hopkins University.
+                Currently, I am an Assistant Professor at Louisiana State University! You can reach me at <a href="mailto:ndrenska@lsu.edu" style="color: inherit; text-decoration: underline;">ndrenska@lsu.edu</a>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar / Footer -->
+    <footer class="navbar navbar-default">
+        <div class="container-fluid text-center">
+            <p>&copy; 2024 Nadia Drenska | <a href="mailto:ndrenska@lsu.edu">ndrenska@lsu.edu</a> | <a href="https://www.math.lsu.edu/chair-welcome">LSU Math</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll behavior
+        var lastScrollTop = 0;
+        $(window).scroll(function (event) {
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop) {
+                $('.navbar-fixed-top').fadeOut();
+            } else {
+                $('.navbar-fixed-top').fadeIn();
+            }
+            lastScrollTop = st;
+        });
+    </script>
+
+</body>
+</html>

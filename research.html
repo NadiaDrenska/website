@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Research - Nadia Drenska</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /*CSS for scrollable view, base from index, modified listings.*/
+
+        .background-section {
+            background-image: url('./pictures/bulgaria.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            width: 100%; /* Ensure full width */
+            margin: 0; /* Remove any margin */
+            padding: 0; /* Remove any padding */
+            box-sizing: border-box;
+        }
+
+        .background-section-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-height: 80vh;
+            overflow-y: auto;
+            width: 90%;
+            font-size: 1.2em;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        .scrollable-list ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .scrollable-list li {
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .research-content img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .research-hero {
+            background-image: url('./pictures/flower.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, var(--hero-bg-opacity));
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+            .hero-content h1 {
+                font-size: 3rem; 
+                margin-bottom: 10px;
+            }
+
+            .hero-content p {
+                font-size: 1.5rem; 
+                margin-bottom: 20px;
+            }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 100%;
+                padding-right: 0; 
+                padding-left: 0; 
+                margin-right: 0; 
+                margin-left: 0; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Nadia Drenska</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="research.html">Research</a></li>
+                <li><a href="cv.pdf" onclick="confirmCV(); return false;">CV</a></li>
+                <li><a href="About.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CV Ask -->
+    <script>
+        function confirmCV() {
+            if (confirm("Leave Page to View CV?")) {
+                window.open('cv.pdf', '_blank');
+            }
+        }
+    </script>
+
+    <!-- Hero Section -->
+    <div class="research-hero">
+        <div class="hero-content">
+            <h1>Research Interests</h1>
+            <p>Exploring the intersection of PDEs, optimal control theory, and machine learning.</p>
+        </div>
+    </div>
+
+    <!-- Research Content -->
+    <div class="container research-content">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="./pictures/professor.jpg" alt="Professor Nadia Drenska" class="img-responsive img-circle">
+            </div>
+            <div class="col-md-8">
+                <h2>Research Interests</h2>
+                <p>
+                    In my research, I use partial differential equations (PDEs), optimal control theory, and graph theory to analyze machine
+                    learning algorithms and investments, and give rigorous performance guarantees. I am a problem solver: I typically start with
+                    an application in mind, and learn and develop whatever methods I need in order to come up with a solution to the problem at
+                    hand. So far, I have bridged select ideas from viscosity solutions of PDEs, optimal control theory, and graph theory, to
+                    target problems in data science and investments. I have innovated and introduced continuous approaches to solve discrete
+                    problems from 'prediction with expert advice' and 'semi-supervised learning.' Moreover, my work proves that these approaches
+                    are asymptotically optimal.
+                </p>
+                <p>
+                    A unifying theme for most of my research is adversarial two-player games, which arise in prediction problems as well as in p-Laplacian
+                    approaches to semi-supervised learning. My broader research goal is to use techniques from PDEs and ODEs to analyze and understand
+                    discrete problems from machine learning, graphs, and finance. Select applications are algorithm boosting, advertisement placing,
+                    stock investments, sports betting, self-driving car software, and data classification.
+                </p>
+                <p>
+                    Another problem I have been working on is inferring body composition from 3D images.
+                    This project is joint with the Pennington Biomedical Research Center.
+                    You can find out more about it from the following article at SIAM Newsletter:
+                    <a href="https://www.siam.org/publications/siam-news/articles/regression-and-machine-learning-offer-insights-about-body-composition-benchmarks" target="_blank">Regression and Machine Learning Offer Insights About Body Composition Benchmarks</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="background-section">
+            <div class="background-section-content scrollable-list">
+                <h2>Publications</h2>
+                <ul>
+                    <li>J. Calder and N. Drenska. Consistency of Semi-Supervised Learning, Stochastic Tug-of-War Games, and the p-Laplacian. (accepted)</li>
+                    <li>D. Mosaphir, J. Calder, and N. Drenska. Numerical Solution of a PDE Arising from Prediction with Expert Advice. (submitted)</li>
+                    <li>J. Calder and N. Drenska. Asymptotically Optimal Strategies for Online Prediction with History-Dependent Experts. Journal of Fourier Analysis and Applications, 27, article 20, 2020, <a href="https://doi.org/10.1007/s00041-021-09815-4" target="_blank">https://doi.org/10.1007/s00041-021-09815-4</a></li>
+                    <li>N. Drenska and J. Calder. Online Prediction with History-Dependent Experts: The General Case. Communications on Pure and Applied Mathematics (CPAM), 2022, <a href="https://doi.org/10.1002/cpa.22049" target="_blank">https://doi.org/10.1002/cpa.22049</a></li>
+                    <li>N. Drenska and R. V. Kohn. A PDE Approach to the Prediction of a Binary Sequence with Advice from Two History-Dependent Experts. Communications on Pure and Applied Mathematics (CPAM), 2022, <a href="https://doi.org/10.1002/cpa.22071" target="_blank">https://doi.org/10.1002/cpa.22071</a></li>
+                    <li>N. Drenska and R.V. Kohn. Prediction with Expert Advice: a PDE Perspective. Journal of Nonlinear Science, 30(1):137-173, 2020, <a href="https://doi.org/10.1007/s00332-019-09570-3" target="_blank">https://doi.org/10.1007/s00332-019-09570-3</a></li>
+                    <li>N. Drenska. A PDE Approach to a Prediction Problem Involving Randomized Strategies. PhD thesis, New York University, 2017</li>
+                </ul>
+
+                <h2>Recent Talks</h2>
+                <ul>
+                    <li>
+                        Body Composition: Insights through Regression and Machine Learning
+                        <ul>
+                            <li>SIAM Annual Meeting, July 2024</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Nadia Drenska's Machine Learning Journey
+                        <ul>
+                            <li>The Johns Hopkins University, April 2024</li>
+                            <li>Louisiana State University, April 2024</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Semi-Supervised Learning with the p-Laplacian in Geometric Methods in Machine Learning and Data Analysis
+                        <ul>
+                            <li>Numerical PDEs: Analysis, Algorithms, and Data Challenges, ICERM, March 2024</li>
+                            <li>ICIAM, August 2023</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Optimal Investment: Robo-Advising Under Small Changes of Risk Aversion
+                        <ul>
+                            <li>Joint Mathematics Meetings 2023</li>
+                        </ul>
+                    </li>
+                    <li>
+                        A PDE Interpretation of Prediction with Expert Advice
+                        <ul>
+                            <li>NJIT, January 2022</li>
+                            <li>JMU Artificial Intelligence and Machine Learning Seminar Series, April 2021</li>
+                            <li>Joint Mathematics Meetings, January 2021</li>
+                            <li>OneWorld Machine Learning, December 2020</li>
+                            <li>Optimal Control, Optimal Transport, and Data Science, IMA, November 2020</li>
+                            <li>LMS Bath Symposium, August 2020</li>
+                        </ul>
+                    </li>
+                    <li>Johns Hopkins Applied Mathematics and Statistics Colloquium, October 2021</li>
+                    <li>WPI Colloquium, January 2021</li>
+                    <li>
+                        Two PDE Approaches to A Problem from Prediction with Expert Advice
+                        <ul>
+                            <li>IPAM, UCLA, May 2020</li>
+                            <li>Analysis and Applied Mathematics Seminar, UIC, February 2020</li>
+                        </ul>
+                    </li>
+                    <li>
+                        PDE Approaches to Two Problems from Prediction with Expert Advice
+                        <ul>
+                            <li>Applied Interdisciplinary Mathematics Seminar, UMich 2019</li>
+                        </ul>
+                    </li>
+                    <li>
+                        A PDE Approach to Some Randomized-Strategy Two-Player Games
+                        <ul>
+                            <li>IMA Data Science Seminar, UMN 2018</li>
+                            <li>Materials Working Group, NYU 2016</li>
+                        </ul>
+                    </li>
+                    <li>
+                        A PDE Approach to Prediction with Expert Advice
+                        <ul>
+                            <li>WPI STEM Faculty Launch, WPI, 2016</li>
+                            <li>RPI Applied Math Days, RPI, 2016</li>
+                            <li>SIAM Conference on Analysis of PDEs, Scottsdale AZ, 2015</li>
+                            <ul>
+                                <li>Received SIAM Student Travel Award</li>
+                            </ul>
+                            <li>Machine Learning Seminar, NYU, 2015</li>
+                            <li>Materials Working Group, NYU, 2015</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2>Online</h2>
+                <p>
+                    This is a <a href="https://www.youtube.com/watch?v=UIkUB0zo8P0" target="_blank">link</a> to my adviser Robert V Kohn's presentation of
+                    joint work with Kangping Zhu and me at Waves, Spectral Theory, and Applications conference, 2015.
+                </p>
+
+                <h2>Awards</h2>
+                <ul>
+                    <li>Moses Greenfield Prize for Outstanding Interdisciplinary Studies, Courant Institute, NYU, 2016</li>
+                    <li>McCracken Scholarship, NYU</li>
+                    <li>Rohn Truell Prize for Outstanding Undergraduate Student, DAM, Brown University, 2012</li>
+                    <li>Sarah Dyer Barnes Scholarship, Brown University, 2011 - 2012</li>
+                    <li>Sigma Xi, Brown University, 2012</li>
+                    <li>Henry Parker Manning Prize Examination, First Prize, Brown University, 2011</li>
+                    <li>First and Second Prizes on Math and Physics Olympiads, Bulgaria 2005-2007</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar / Footer -->
+    <footer class="navbar navbar-default">
+        <div class="container-fluid text-center">
+            <p>&copy; 2024 Nadia Drenska | <a href="mailto:ndrenska@lsu.edu">ndrenska@lsu.edu</a> | <a href="https://www.math.lsu.edu/chair-welcome">LSU Math</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll behavior
+        var lastScrollTop = 0;
+        $(window).scroll(function (event) {
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop) {
+                $('.navbar-fixed-top').fadeOut();
+            } else {
+                $('.navbar-fixed-top').fadeIn();
+            }
+            lastScrollTop = st;
+        });
+    </script>
+
+</body>
+</html>
